@@ -1,0 +1,75 @@
+#content{
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    justify-content: start;
+    align-content: start;
+    box-sizing: border-box;
+}
+
+
+.service-card{
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.svc-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.svc-address, .svc-city{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.svc-datetime{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.svc-desc{
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    word-break: break-word;
+}
+
+/* Add formatting */
+#add{
+    background: linear-gradient(to right, rgba(89, 89, 89, 0.906), rgba(82, 82, 82, 0.838));
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 30px;
+    padding: 5px 10px 5px;
+    border-radius: 16px;
+    border: 2px solid white;
+}
+#add a{
+    text-decoration: none;
+    color: white;
+}
+#add:hover {
+    opacity: 50%;
+    transform: scale(1.1);
+    cursor: pointer;
+}

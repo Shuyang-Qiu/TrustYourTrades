@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-image: url(../Images/home-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    overflow: hidden;
+}
+#container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+#container #nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 22px;
+}
+#container #nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* Logo/Name */
+#logo-name{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+}
+#website-logo{
+    height: 75px;
+    margin-left: 25px;
+}
+#website-name{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Links */
+#nav-links{
+    margin-left: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-right: 20px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#nav-links ul{
+    margin: 0;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    margin: 0px 25px 0px 25px;
+}
+.link:hover{
+    transform: scale(1.1);
+    opacity: 50%;
+}
+
+#logout-link{
+    text-decoration: none;
+    color: white;
+    padding: 8px 40px;
+    display: block;
+    border-radius: 16px;
+    font-weight: bold;
+    background: linear-gradient(to right, rgb(255, 70, 70), rgb(255, 0, 0));
+}
+#logout-link:hover{
+    opacity: 50%;
+    transform: scale(1.05);
+}
+#login-link{
+    text-decoration: none;
+    color: white;
+    padding: 8px 40px;
+    margin-left: 10px;
+    display: block;
+    border-radius: 16px;
+    font-weight: bold;
+   
+    background: linear-gradient(to right, rgb(0, 110, 255), rgb(0, 181, 209));
+}
+#login-link:hover{
+    opacity: 50%;
+    transform: scale(1.05);
+}
+
+footer{
+    font-size: 12px;
+    height: 20px;
+    background-color: rgba(192, 192, 192, 0.457);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

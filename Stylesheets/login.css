@@ -1,0 +1,118 @@
+/* Content */
+#content{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+#login{
+    height: 700px;
+    width: 600px;
+    background-color: rgba(43, 43, 43, 0.396);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+}
+#title{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+#subtitle{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.785);
+    padding-bottom: 30px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+}
+form input{
+    padding: 15px;
+    border: none;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.558);
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    margin: 0;
+}
+form input::placeholder{
+    color: rgba(255, 255, 255, 0.491);
+}
+form input:hover{
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    box-shadow: 0 0 4px white;
+}
+form label{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.855);
+    margin-bottom: -10px;
+}
+form p{
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+form p a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+form p a:hover{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+
+
+form input[type="submit"]{
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border-bottom: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+form input[type="submit"]:hover{
+    background-color: rgba(197, 197, 197, 0.8);
+    border: none;
+    box-shadow: none;
+}
+.acc-link{
+    margin: 0px;
+}
+
+.error {
+    color: red;
+}
+
+/* radio input formatting */
+.cont_bool{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.cont_bool label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

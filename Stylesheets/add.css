@@ -1,0 +1,252 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+#container{
+    background-image: url(../Images/home-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation Bar */
+#nav{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* Logo/Name */
+#logo-name{
+    display: flex;
+    align-items: center;
+    padding-right: 200px;
+    padding-left: 10px;
+}
+#website-logo{
+    height: 75px;
+    padding-right: 10px;
+}
+#website-name{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Content */
+#content{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+#entry{
+    height: 700px;
+    width: 600px;
+    background-color: rgba(43, 43, 43, 0.396);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+}
+
+#title{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+#subtitle{
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.785);
+    padding-bottom: 80px;
+}
+
+/* Selection buttons */
+#selection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#selection button{
+    width: 80%;
+    padding: 15px;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.558);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#selection button:hover{
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    box-shadow: 0 0 4px white;
+}
+
+/* Create / Edit panels */
+#create, #edit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#create form, #edit form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 6px;
+}
+#create label, #edit label{
+    color: rgba(255, 255, 255, 0.785);
+    font-size: 14px;
+    margin-top: 8px;
+}
+#create input, #create select, #edit input, #edit select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+#create input:focus, #create select:focus, #edit input:focus, #edit select:focus{
+    border-color: rgba(255, 255, 255, 0.8);
+}
+#edit select option{
+    background: #2b2b2b;
+}
+#create form button, #edit form button{
+    margin-top: 16px;
+    padding: 12px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.558);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#create form button:hover, #edit form button:hover{
+    box-shadow: 0 0 4px white;
+}
+
+/* Standalone form (add_certificate / edit_certificate) */
+#entry form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 6px;
+}
+#entry label{
+    color: rgba(255, 255, 255, 0.785);
+    font-size: 14px;
+    margin-top: 8px;
+}
+#entry input, #entry select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+#entry input:focus, #entry select:focus{
+    border-color: rgba(255, 255, 255, 0.8);
+}
+#entry input:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+#entry input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(1);
+}
+#entry form button{
+    margin-top: 16px;
+    padding: 12px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.558);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#entry form button:hover {
+    box-shadow: 0 0 4px white;
+}
+#entry small {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 12px;
+    margin-top: -4px;
+}
+
+/* Back button */
+.back{
+    margin-top: 12px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.back:hover{
+    color: white;
+}
+
+.hidden{
+    display: none !important;
+}
+
+/* Success / error messages */
+.msg-success, .msg-error{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 6px;
+}
+.msg-success{
+    color: #6dda8d;
+    background: rgba(109, 218, 141, 0.1);
+    border: 1px solid rgba(109, 218, 141, 0.3);
+}
+.msg-error{
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+
+/* service editing */
+#city-row {
+    display: flex;
+    gap: 8px;
+}
+
+#city-row input {
+    flex: 1;
+    min-width: 0;
+}
